@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-app.get('/getTechTalkMessage', (req, res) => res.send('Hello Tech Talk'))
+app.get('/', (req, res) => res.send('Hello Tech Talk'))
 
 app.post('/postTechTalkMessage', (req,res)=>{
     res.send(req.body.message);
