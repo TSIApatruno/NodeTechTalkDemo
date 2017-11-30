@@ -13,4 +13,9 @@ app.post('/postTechTalkMessage', (req,res)=>{
     res.send(req.body.message);
 })
 
-app.listen(3004, () => console.log('Example app listening on port 3004!'))
+app.set('port', process.env.PORT || 3090);
+
+var server = app.listen(app.get('port'), function () {
+    console.log('Express server listening on port ' + server.address().port);
+});
+// app.listen(3004, () => console.log('Example app listening on port 3004!'))
